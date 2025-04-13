@@ -7,7 +7,6 @@ import {
   Button,
   Spinner,
   Alert,
-  Image,
   Navbar,
   Nav,
   Col,
@@ -68,7 +67,6 @@ const ModernChatInterface: React.FC = () => {
             </Row>
           </Container>
         </Navbar>
-        {/* Messages area */}
         <div className={styles.messagesContainer}>
           {messages.length === 0 ? (
             <div className={styles.welcomeMessage}>
@@ -107,7 +105,7 @@ const ModernChatInterface: React.FC = () => {
                   >
                     {msg.role === "user"
                       ? msg.content
-                      : // For assistant messages, preserve line breaks and formatting
+                      :
                         msg.content.split("\n").map((line, i) => (
                           <React.Fragment key={i}>
                             {line}
@@ -138,7 +136,6 @@ const ModernChatInterface: React.FC = () => {
           <div ref={endOfMessagesRef} />
         </div>
 
-        {/* Input area */}
         <div className={`${styles.inputContainer} justify-content-center`}>
           <Form onSubmit={handleSubmit} className={styles.inputForm}>
             <Form.Control
