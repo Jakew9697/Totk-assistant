@@ -1,0 +1,256 @@
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #1a1a2e;
+  color: #e6e6e6;
+}
+
+.chatHeader {
+  background-color: transparent !important;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.chatTitle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  color: #f0e6d2;
+  font-size: 1.5rem;
+}
+
+.chatLogo {
+  height: 40px;
+  width: 40px;
+}
+
+.chatTitleText {
+  margin: 0;
+  font-weight: 600;
+}
+
+.clearButton {
+  background-color: rgba(240, 230, 210, 0.1);
+  border: 1px solid rgba(240, 230, 210, 0.3);
+  color: #f0e6d2;
+  transition: all 0.2s ease;
+}
+
+.clearButton:hover {
+  background-color: rgba(240, 230, 210, 0.2);
+  color: #fff;
+}
+
+.messagesContainer {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem 10% 1rem;
+  background-image: linear-gradient(rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.7)), 
+                    url('/zelda-bg-pattern.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.message {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.userMessage {
+  align-self: flex-end;
+  text-align: right;
+}
+
+.assistantMessage {
+  align-self: flex-start;
+}
+
+.messageContent {
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  line-height: 1.5;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.userMessageContent {
+  background-color: #0078FF;
+  color: white;
+  border-bottom-right-radius: 3px;
+  margin-left: auto;
+}
+
+.assistantMessageContent {
+  background-color: #293b5f;
+  color: #e6e6e6;
+  border-bottom-left-radius: 3px;
+  line-height: 1.6;
+}
+
+.messageSender {
+  margin: 0.3rem 0.5rem;
+  font-size: 0.85rem;
+  color: rgba(240, 230, 210, 0.6);
+}
+
+.welcomeMessage {
+  max-width: 600px;
+  margin: 3rem auto;
+  text-align: center;
+  background: rgba(22, 33, 62, 0.7);
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.welcomeTitle {
+  color: #f0e6d2;
+  margin-bottom: 1rem;
+}
+
+.welcomeDescription {
+  color: #d6d6d6;
+  line-height: 1.6;
+}
+
+.welcomeIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #f0e6d2;
+}
+
+.inputContainer {
+  background-color: transparent;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.inputForm {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.messageInput {
+  flex: 1;
+  background-color: rgba(240, 230, 210, 0.1) !important;
+  border: 1px solid rgba(240, 230, 210, 0.2);
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-right: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.messageInput:focus {
+  border-color: rgba(240, 230, 210, 0.5);
+  background-color: rgba(240, 230, 210, 0.15) !important;
+  box-shadow: 0 0 0 0.25rem rgba(240, 230, 210, 0.1);
+}
+
+.messageInput::placeholder {
+  color: rgba(240, 230, 210, 0.5);
+}
+
+.sendButton {
+  background-color: #ff6b6b;
+  border-color: #ff6b6b;
+  color: white;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+}
+
+.sendButton:hover:not(:disabled) {
+  background-color: #ff5252;
+  border-color: #ff5252;
+  transform: translateY(-2px);
+}
+
+.sendButton:disabled {
+  background-color: rgba(255, 107, 107, 0.5);
+  border-color: transparent;
+}
+
+.loadingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.loadingText {
+  margin-left: 0.75rem;
+}
+
+.errorAlert {
+  margin: 1rem 0;
+  border-radius: 8px;
+  background-color: rgba(220, 53, 69, 0.15);
+  border-color: rgba(220, 53, 69, 0.3);
+  color: #f07470;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .messagesContainer {
+    padding: 1rem 5% 0.5rem;
+  }
+  
+  .message {
+    max-width: 90%;
+  }
+  
+  .chatTitle {
+    font-size: 1.3rem;
+  }
+  
+  .chatLogo {
+    height: 30px;
+    width: 30px;
+  }
+  
+  .sendButton {
+    min-width: 60px;
+    padding: 0.75rem 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .messagesContainer {
+    padding: 1rem 0.5rem 0.5rem;
+  }
+  
+  .message {
+    max-width: 95%;
+  }
+  
+  .chatTitle {
+    font-size: 1.1rem;
+  }
+  
+  .chatLogo {
+    height: 24px;
+    width: 24px;
+  }
+  
+  .sendButton {
+    min-width: 50px;
+    padding: 0.75rem 0.75rem;
+  }
+}

@@ -1,0 +1,52 @@
+.messageWrapper {
+  display: flex;
+  margin-bottom: 16px;
+  align-items: flex-start;
+}
+
+.userMessage {
+  flex-direction: row-reverse;
+}
+
+.assistantMessage {
+  flex-direction: row;
+}
+
+.avatarContainer {
+  flex-shrink: 0;
+  margin: 0 8px;
+}
+
+.avatar {
+  border-radius: 50%;
+  background-color: #f0f0f0;
+}
+
+.messageBubble {
+  max-width: 80%;
+  border-radius: 18px;
+}
+
+.userBubble {
+  background-color: #0078FF;
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.assistantBubble {
+  background-color: #F3E5AB;
+  border-bottom-left-radius: 4px;
+  color: #333;
+}
+
+.assistantBubble {
+  background-color: #4BABA4;
+  color: #FFFFFF;
+  border: 1px solid #38827D;
+}
+
+.userBubble {
+  background-color: #F0D772;
+  color: #5D4215;
+  border: 1px solid #CEB45F;
+}
