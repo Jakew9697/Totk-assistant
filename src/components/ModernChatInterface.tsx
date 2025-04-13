@@ -41,12 +41,12 @@ const ModernChatInterface: React.FC = () => {
           bg="dark"
           variant="dark"
           expand="lg"
-          className={styles.chatHeader}
+          className={`${styles.chatHeader} mb-5`} 
         >
           <Container fluid className="justify-content-center">
             <Row className="w-100 d-flex flex-column flex-lg-row align-items-center justify-content-lg-between">
               <Col className="text-center text-lg-start">
-                <Navbar.Brand href="#">
+                <Navbar.Brand href="#" className="me-0">
                   <span className={styles.chatTitleText}>
                     Tears of the Kingdom Assistant
                   </span>
