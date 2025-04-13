@@ -32,20 +32,22 @@
 }
 
 .chatTitleText {
+  color: goldenrod;
   margin: 0;
   font-weight: 600;
 }
 
 .clearButton {
-  background-color: rgba(240, 230, 210, 0.1);
-  border: 1px solid rgba(240, 230, 210, 0.3);
+  border: 1px solid goldenrod;
   color: #f0e6d2;
   transition: all 0.2s ease;
 }
 
 .clearButton:hover {
-  background-color: rgba(240, 230, 210, 0.2);
+  background-color: goldenrod;
+  border-color: goldenrod;
   color: #fff;
+  transform: translateY(-2px);
 }
 
 .messagesContainer {
@@ -133,6 +135,8 @@
   padding: 1rem;
   display: flex;
   align-items: center;
+  border-top: 1px solid goldenrod;
+  border-radius: 10px;
 }
 
 .inputForm {
@@ -164,8 +168,8 @@
 }
 
 .sendButton {
-  background-color: #ff6b6b;
-  border-color: #ff6b6b;
+  background-color: goldenrod;
+  border-color: goldenrod;
   color: white;
   border-radius: 8px;
   padding: 0.75rem 1.5rem;
@@ -177,13 +181,13 @@
 }
 
 .sendButton:hover:not(:disabled) {
-  background-color: #ff5252;
-  border-color: #ff5252;
+  background-color: #daa52090;
+  border-color: #daa52090;
   transform: translateY(-2px);
 }
 
 .sendButton:disabled {
-  background-color: rgba(255, 107, 107, 0.5);
+  background-color: #daa52090;
   border-color: transparent;
 }
 
@@ -213,7 +217,7 @@
   }
   
   .message {
-    max-width: 90%;
+    max-width: 100%;
   }
   
   .chatTitle {
@@ -237,7 +241,7 @@
   }
   
   .message {
-    max-width: 95%;
+    max-width: 100%;
   }
   
   .chatTitle {

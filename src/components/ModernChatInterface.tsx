@@ -41,7 +41,7 @@ const ModernChatInterface: React.FC = () => {
           bg="dark"
           variant="dark"
           expand="lg"
-          className={`${styles.chatHeader} mb-5`} 
+          className={`${styles.chatHeader} mb-sm-5 mb-0 mb-md-0`} 
         >
           <Container fluid className="justify-content-center">
             <Row className="w-100 d-flex flex-column flex-lg-row align-items-center justify-content-lg-between">
@@ -55,7 +55,7 @@ const ModernChatInterface: React.FC = () => {
               <Col className="mt-2 mt-lg-0 text-center text-lg-end">
                 <Nav className="justify-content-center justify-content-lg-end">
                   <Button
-                    variant="outline-light"
+                    variant="success"
                     size="sm"
                     onClick={clearChat}
                     className={styles.clearButton}
@@ -151,7 +151,7 @@ const ModernChatInterface: React.FC = () => {
               disabled={isLoading || !input.trim()}
               className={styles.sendButton}
             >
-              {isLoading ? <Spinner animation="border" size="sm" /> : "Ask"}
+              {isLoading ? <Spinner animation="border" size="sm" /> : "Send"}
             </Button>
           </Form>
         </div>
